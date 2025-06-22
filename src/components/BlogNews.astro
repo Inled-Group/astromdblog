@@ -1,0 +1,38 @@
+---
+// Sección de noticias
+const newsData = [
+    {
+        id: 1,
+        title: 'Blog new',
+        summary: 'summary',
+        date: '17-6-25',
+        category: 'tech',
+        image: 'path-to-yout-img.png',
+        slug: 'blog-new'
+    }
+];
+---
+
+<section id="noticias" class="news">
+    <div class="container">
+        <h2 class="section-title">Blog</h2>
+        <div class="news-grid" id="newsGrid">
+            {newsData.map(news => (
+                <article class="news-card" data-news-id={news.id} data-news-slug={news.slug}>
+                    <div class="news-image">
+                        <img src={news.image} alt={news.title} />
+                        <div class="news-category">{news.category}</div>
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">{news.title}</h3>
+                        <p class="news-summary">{news.summary}</p>
+                        <div class="news-meta">
+                            <span class="news-date">{news.date}</span>
+                            <span class="news-read-more">Leer más →</span>
+                        </div>
+                    </div>
+                </article>
+            ))}
+        </div>
+    </div>
+</section>

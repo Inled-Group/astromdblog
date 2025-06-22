@@ -1,0 +1,46 @@
+{
+  "name": "astromdblog",
+  "version": "1.0.0",
+  "description": "Blog plugin with Markdown rendering in Astro",
+  "type": "module",
+  "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "astro",
+    "markdown",
+    "blog",
+    "render",
+    "static-site",
+    "ssg"
+  ],
+  "author": "Inled Group <github@inled.es>",
+  "license": "GNU GPLv3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Inled-Group//astromdblog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Inled-Group//astromdblog/issues"
+  },
+  "homepage": "https://github.com/Inled-Group//astromdblog#readme",
+  "dependencies": {
+    "astro": "^5.7.13",
+    "marked": "^12.0.2"
+  },
+  "peerDependencies": {
+    "astro": "^5.0.0"
+  }
+}
