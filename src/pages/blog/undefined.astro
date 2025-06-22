@@ -1,13 +1,10 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import Encabezado from '../../components/Encabezado.astro';
-import HeroCTA from '../../components/HeroCTA.astro';
-import PieDePagina from '../../components/PieDePagina.astro';
 import MarkdownRenderer from '../../components/MarkdownRenderer.astro';
 import fs from 'fs';
 import path from 'path';
 
-// Función para convertir markdown a HTML (básico)
+// Convert Markdown to HTML
 function markdownToHtml(markdown: string): string {
   return markdown
     // Headers
@@ -48,12 +45,9 @@ const htmlContent = markdownToHtml(markdownContent);
 
  
 <Layout>
-	<title>undefined render blog | METACORDE</title>
+	<title>undefined render blog | AstroMDBlog</title>
 	<meta name="description" content="Inled Blog Render Markdown">
-    <Encabezado />
     <MarkdownRenderer 
   htmlContent={htmlContent}
 />
-    <HeroCTA />
-    <PieDePagina />
 </Layout>
